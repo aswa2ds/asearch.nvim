@@ -1,0 +1,83 @@
+==============================================================================
+asearch.setup({opts})                                        *asearch.setup()*
+    Setup function to be run by user. Configure the asearch component and
+    search enginer.
+
+    Usage:
+    
+    require('asearch').setup {
+      menu = {
+        -- nui.nvim popup options
+        popup = {
+          relative = "win",
+          position = {
+            row = "80%",
+            col = "50%",
+          },
+          border = {
+            style = "rounded",
+            text = {
+              top = "[A-S-EARCH ENGINE]",
+              top_align = "center",
+            },
+          },
+          win_options = {
+            winblend = 10,
+            winhighlight = "Normal:Normal,FloatBorder:FloatBorder",
+          },
+        },
+        opts = {
+          {
+            category = {
+              title = "search",
+              align = "center",
+            },
+            items = {
+              {
+                "google",
+                {
+                  url = "https://www.google.com/search?q=",
+                  prompt = "> ",
+                },
+              },
+              {
+                "github",
+                {
+                  url = "https://github.com/search?q=",
+                  prompt = "> ",
+                },
+              },
+            },
+          },
+        },
+      }
+
+      search_bar = {
+        -- nui.nvim popup options
+	popup = {
+          relative = "win",
+          position = {
+            row = "80%",
+            col = "50%",
+          },
+          size = 20,
+          border = {
+            style = "rounded",
+            text = {
+              top = "[A-S-EARCH]",
+              top_align = "left",
+            },
+          },
+          win_options = {
+            winhighlight = "Normal:Normal",
+          },
+	},
+	opts = {
+          prompt = "> ",
+          default_value = "",
+	},
+      }
+    }
+
+
+ vim:tw=78:ts=8:ft=help:norl:

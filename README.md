@@ -1,1 +1,1 @@
-# asearch.nvim
+# search.nvim
